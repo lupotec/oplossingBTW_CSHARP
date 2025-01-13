@@ -24,14 +24,18 @@ class Program
         Console.Write("Voer een bedrag in: ");
         geldBedrag = Console.ReadLine();
 
-        // Probeer de invoer om te zetten naar een double
+        //geldBedrag=120.00;
+        //buffer = (geldBedrag * btw) / 100;
+        //Console.WriteLine($"De BTW van {btw}% op het bedrag {geldBedrag}bedraagt {buffer} euro.");
+
+        // Probeer de invoer om te zetten naar een double controle
         if (double.TryParse(geldBedrag, out double geldBedrag2))
         {
             // Bereken de BTW en het totaalbedrag
             buffer = (geldBedrag2 * btw) / 100;
 
             // Toon de BTW-berekening
-            Console.WriteLine($"De BTW van {btw}% op het bedrag {geldBedrag2:F2} bedraagt {buffer:F2} euro.");
+            Console.WriteLine($"De BTW van {btw}% op het bedrag {geldBedrag2}bedraagt {buffer} euro.");
         }
         else
         {
